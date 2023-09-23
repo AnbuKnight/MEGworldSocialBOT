@@ -1,0 +1,123 @@
+<h2 mat-dialog-title>
+    <div style="height: 20px;">
+    <div style="text-align: center;">Post Audience</div> 
+    <span mat-button mat-dialog-close style="float: left;
+    margin: -30px 0 0 0;">
+        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/shzFU_6ZHy9.png&quot;); background-position: -52px -62px; background-size: 190px 190px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+    </span>       
+</div>
+<hr>
+</h2>
+<mat-dialog-content class="mat-typography">
+
+<p>
+    Who can see your post?
+</p>
+<p>
+    Your post will show up in Feed, on your profile and in search results.
+</p>
+<p>
+    Your default audience is set to Friends, but you can change the audience of this specific post.
+</p>
+<div class="container">
+    <div class="row" style="line-height: 15px;">
+      <div class="col-sm" style="max-width: 15%;">
+        <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/0QOZ5Rw18zW.png" alt="" height="24" width="24">
+      </div>
+      <div class="col-sm" style="max-width: 75%;">
+        <p style="font-weight: bold;">
+            Public
+        </p>
+        <p>
+            Anyone on or off facebook
+        </p>
+      </div>
+      <div class="col-sm" style="max-width: 0%;">
+        <mat-radio-button value="1"></mat-radio-button>
+      </div>
+    </div>
+    <div class="row" style="line-height: 15px;"> 
+        <div class="col-sm" style="max-width: 15%;">
+            <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/GgYVAS1o2Dp.png" alt="" height="24" width="24">
+        </div>
+        <div class="col-sm" style="max-width: 75%;">
+            <p style="font-weight: bold;">
+                Friends
+            </p>
+            <p>
+                Your friends on facebook
+            </p>
+        </div>
+        <div class="col-sm" style="max-width: 0%;">
+            <mat-radio-button value="2"></mat-radio-button>
+        </div>
+      </div>
+      <div class="row" style="line-height: 15px;">
+        <div class="col-sm" style="max-width: 15%;">
+            <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/_OLjeOMXK05.png" alt="" height="24" width="24">
+        </div>
+        <div class="col-sm" style="max-width: 75%;">
+            <p style="font-weight: bold;">
+                Friends except...
+            </p>
+            <p>
+                Don't show to some friends
+            </p>
+        </div>
+        <div class="col-sm" style="max-width: 0%;">
+            <mat-radio-button value="3"></mat-radio-button>
+        </div>
+      </div>
+      <div class="row" style="line-height: 40px;">
+        <div class="col-sm" style="max-width: 15%;"> 
+            <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/fxRwLKfcAmo.png" alt="" height="24" width="24">
+        </div>
+        <div class="col-sm" style="max-width: 75%;">
+            <p style="font-weight: bold;">
+                Only me
+            </p>
+        </div>
+        <div class="col-sm" style="max-width: 0%;">
+            <mat-radio-button value="4"></mat-radio-button>
+        </div>
+      </div>
+      <div class="row" style="line-height: 15px;">
+        <div class="col-sm" style="max-width: 15%;">
+            <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/xZG_j_BgiWu.png" alt="" height="24" width="24">
+        </div>
+        <div class="col-sm" style="max-width: 75%;">
+            <p style="font-weight: bold;">
+                Specific friends
+            </p>
+            <p>
+                Only show to some friends
+            </p>
+        </div>
+        <div class="col-sm" style="max-width: 0%;">
+            <mat-radio-button value="5"></mat-radio-button>
+        </div>
+      </div>
+      <div class="row" style="line-height: 15px;">
+        <div class="col-sm" style="max-width: 15%;">
+            <img class="x1b0d499 xep6ejk" src="https://static.xx.fbcdn.net/rsrc.php/v3/yB/r/417zloHnnzB.png" alt="" height="24" width="24">
+        </div>
+        <div class="col-sm" style="max-width: 75%;">
+            <p style="font-weight: bold;">
+                Custom
+            </p>
+            <p>
+                Include and exclude friends and lists
+            </p>
+        </div>
+        <div class="col-sm" style="max-width: 0%;">
+            <mat-radio-button value="6"></mat-radio-button>
+        </div>
+      </div>
+  </div>
+
+
+</mat-dialog-content>
+<mat-dialog-actions class="facebookPostDialogFooter" align="end">
+    <button mat-button mat-dialog-close style="background: blue; color: white;">Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Done</button>
+</mat-dialog-actions>

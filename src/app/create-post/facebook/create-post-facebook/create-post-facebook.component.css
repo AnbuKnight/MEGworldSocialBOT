@@ -1,0 +1,65 @@
+::ng-deep .cdk-overlay-pane {
+    /* height: calc(100vh - 200px); */
+    width: calc(100vh - 150px);
+    max-width: 60vw !important;
+}
+
+.userLogo
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 50px;    
+    
+  }
+  
+  .box>* {
+    grid-column: 2;
+  }
+  
+  .box>*:first-child {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+  
+  .box .selected {
+    align-self: center;
+  }
+  
+  .box>*:last-child {
+    align-self: flex-end;
+  }
+  .audienceSelectionButton
+  {
+    padding: 5px 0 5px 0;
+    margin: 0px 0 0 0;
+    line-height: 0.25rem;
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+  }
+  .audienceLogo
+  {    
+    height: 15px;
+    width: 15px;
+  }
+.postTextArea
+{
+    border: none;
+    width: 100%;
+}
+::ng-deep .mat-dialog-actions.mat-dialog-actions-align-end, .mat-dialog-actions[align=end] {
+  justify-content: flex-start;
+}
+
+::ng-deep  .mat-dialog-actions 
+{
+  display: block;
+}
+::ng-deep .tooltipZindex{
+  z-index: 9999999999999999999 !important;
+}

@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>
+    <div style="height: 20px;">
+    <div style="text-align: center;">Create Post</div> 
+    <span mat-button mat-dialog-close style="float: right;
+    margin: -30px 0 0 0;">
+        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/shzFU_6ZHy9.png&quot;); background-position: -154px -88px; background-size: 190px 190px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+    </span>       
+</div>
+<hr>
+<div class="box">
+    <div><a href="javascript:void(0)"><img _ngcontent-pak-c105="" src="./assets/img/faces/marc.jpg" class="img userLogo"></a></div>
+    <div style="font-size: .9375rem; height: 20px;">Anbu</div>
+    <div><button class="audienceSelectionButton" (click)="chooseAudience()">
+        <img class="audienceLogo" src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/4qsdCsLNqKi.png">
+        <span style="font-size: .8125rem;">                    
+            Friends
+        </span>
+        
+      </button></div>
+  </div>
+</h2>
+<mat-dialog-content class="mat-typography">
+<div style="display: flex;">
+    <!-- <mat-form-field class="example-full-width"> -->
+        <!-- <mat-label>Leave a comment</mat-label> -->
+        <textarea class="postTextArea" matInput placeholder="What's on your mind, Anbu?" [(ngModel)]="message">
+        </textarea>
+        <i        
+        (click)="toggled = !toggled"
+        [(emojiPickerIf)]="toggled"
+        [emojiPickerDirection]="'bottom' || 'top' || 'left' || 'right'"
+        (emojiPickerSelect)="handleSelection($event)"
+        ><i data-visualcompletion="css-img" class="x1b0d499 xl1xv1r" aria-label="Insert an emoji" role="img" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/B-tB9aUdp5z.png&quot;); background-position: 0px -72px; background-size: 38px 486px; background-repeat: no-repeat; display: inline-block;"></i></i
+      >
+      <!-- </mat-form-field> -->
+</div>
+<div>
+    <ngx-dropzone style="background-color: #F2F3F5; border-radius: 5px;
+    border: 1px solid black !important;" (change)="onSelect($event)">
+        <ngx-dropzone-label>Add Photos/Videos or drag and drop</ngx-dropzone-label>
+        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
+    </ngx-dropzone>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions class="facebookPostDialogFooter" align="end">
+    <div style="padding: 5px 10px 0px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flow-root;">
+        <div style="float: left;">Add to your post</div>
+        <span style="float: right;">
+        <div style="float: right;" _ngcontent-bqe-c110="" class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><img _ngcontent-bqe-c110="" src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/a6OjkIIE-R0.png" alt="" class="x1b0d499 xl1xv1r" style="height: 24px; width: 24px;"></div>
+        <div style="float: right; margin: 0 10px 0 10px" class="xr9ek0c xfs2ol5 xjpr12u x12mruv9"><div class=""><span class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"><div aria-label="Tag people" class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w x1ypdohk xdl72j9 x2lah0s xe8uvvx x2lwn1j xeuugli x1hl2dhg xggy1nq x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz xjyslct xjbqb8w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1ja2u2z" role="button" tabindex="0"><div><div><div class="xc9qbxq x1n2onr6 x14qfxbe x14yjl9h xudhj91 x18nykt9 xww2gxu"><div class="x4k7w5x x1h91t0o x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1jfb8zj x1beo9mf x3igimt xarpa2k x1n2onr6 x1qrby5j"><div class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><img class="x1b0d499 xl1xv1r" src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/MqTJr_DM3Jg.png" alt="" style="height: 24px; width: 24px;"></div><div class="x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip" data-visualcompletion="ignore"></div></div></div></div><div><div></div></div></div></div></span></div></div>
+        <div style="float: right;" class="xr9ek0c xfs2ol5 xjpr12u x12mruv9"><div class=""><span class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"><div aria-label="Feeling/activity" class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w x1ypdohk xdl72j9 x2lah0s xe8uvvx x2lwn1j xeuugli x1hl2dhg xggy1nq x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz xjyslct xjbqb8w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1ja2u2z" role="button" tabindex="0"><div><div><div class="xc9qbxq x1n2onr6 x14qfxbe x14yjl9h xudhj91 x18nykt9 xww2gxu"><div class="x4k7w5x x1h91t0o x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1jfb8zj x1beo9mf x3igimt xarpa2k x1n2onr6 x1qrby5j"><div class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><img class="x1b0d499 xl1xv1r" src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/yMDS19UDsWe.png" alt="" style="height: 24px; width: 24px;"></div><div class="x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip" data-visualcompletion="ignore"></div></div></div></div><div><div></div></div></div></div></span></div></div>
+        <div style="float: right; margin: 0 10px 0 10px" class="xr9ek0c xfs2ol5 xjpr12u x12mruv9"><div class=""><span class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"><div aria-label="Check in" class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w x1ypdohk xdl72j9 x2lah0s xe8uvvx x2lwn1j xeuugli x1hl2dhg xggy1nq x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz xjyslct xjbqb8w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1ja2u2z" role="button" tabindex="0"><div><div><div class="xc9qbxq x1n2onr6 x14qfxbe x14yjl9h xudhj91 x18nykt9 xww2gxu"><div class="x4k7w5x x1h91t0o x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1jfb8zj x1beo9mf x3igimt xarpa2k x1n2onr6 x1qrby5j"><div class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><img class="x1b0d499 xl1xv1r" src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/uywzfiZad5N.png" alt="" style="height: 24px; width: 24px;"></div><div class="x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip" data-visualcompletion="ignore"></div></div></div></div><div><div></div></div></div></div></span></div></div>
+        <div style="float: right;" class="xr9ek0c xfs2ol5 xjpr12u x12mruv9"><div class="x1sqbtui x3q8yk8 x197sbye"><span class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"><div aria-describedby=":rd8:" aria-disabled="true" aria-label="GIF" class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w xdl72j9 x2lah0s xe8uvvx x2lwn1j xeuugli x1hl2dhg xggy1nq x1h6gzvc x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz xjyslct xjbqb8w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1ja2u2z" role="button" tabindex="-1"><div><div><div class="xc9qbxq x1n2onr6 x14qfxbe x14yjl9h xudhj91 x18nykt9 xww2gxu"><div class="x4k7w5x x1h91t0o x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1jfb8zj x1beo9mf x3igimt xarpa2k x1n2onr6 x1qrby5j"><div class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><img class="x1b0d499 xl1xv1r" src="https://static.xx.fbcdn.net/rsrc.php/v3/yX/r/j0Jp-GpONWx.png" alt="" style="height: 24px; width: 24px;"></div></div></div></div><div><div></div></div></div></div></span></div></div>
+        <div style="float: right; margin: 0 10px 0 10px" class="xr9ek0c xfs2ol5 xjpr12u x12mruv9"><div class=""><span class="x4k7w5x x1h91t0o x1h9r5lt x1jfb8zj xv2umb2 x1beo9mf xaigb6o x12ejxvf x3igimt xarpa2k xedcshv x1lytzrv x1t2pt76 x7ja8zs x1qrby5j"><div aria-label="More" class="x1i10hfl x1qjc9v5 xjqpnuy xa49m3k xqeqjp1 x2hbi6w x1ypdohk xdl72j9 x2lah0s xe8uvvx x2lwn1j xeuugli x1hl2dhg xggy1nq x1t137rt x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x3nfvp2 x1q0g3np x87ps6o x1lku1pv x1a2a7pz xjyslct xjbqb8w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x972fbf xcfux6l x1qhh985 xm0m39n x9f619 xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x16tdsg8 x1ja2u2z" role="button" tabindex="0"><div><div><div class="xc9qbxq x1n2onr6 x14qfxbe x14yjl9h xudhj91 x18nykt9 xww2gxu"><div class="x4k7w5x x1h91t0o x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1jfb8zj x1beo9mf x3igimt xarpa2k x1n2onr6 x1qrby5j"><div class="x6s0dn4 x78zum5 xl56j7k x1n2onr6 x5yr21d xh8yej3"><i data-visualcompletion="css-img" class="x1b0d499 xl1xv1r" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/9oLIQ46ecpP.png&quot;); background-position: 0px -38px; background-size: 38px 122px; background-repeat: no-repeat; display: inline-block;"></i></div><div class="x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x1ey2m1c xds687c xg01cxk x47corl x10l6tqk x17qophe x13vifvy x1ebt8du x19991ni x1dhq9h x1wpzbip" data-visualcompletion="ignore"></div></div></div></div><div><div></div></div></div></div></span></div></div>
+    </span>
+    </div>
+    <div>
+        <button style="    margin: 10px 0 0 0;
+        width: 100%;" mat-flat-button color="primary">Post</button>
+    </div>
+  <!-- <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+</mat-dialog-actions>
